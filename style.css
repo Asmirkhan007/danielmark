@@ -10,6 +10,12 @@
   font-size: 3rem;
 }
 
+.intro-icon {
+  font-size: 15rem;
+  color: blueviolet;
+  margin: 0px auto;
+}
+
 @media (min-width: 768px) {
   .hero-tagline {
     font-size: 7rem;
