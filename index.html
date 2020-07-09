@@ -22,7 +22,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css"
+    />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
 
     <link rel="stylesheet" href="style.css" />
 
@@ -120,9 +126,11 @@
 
     <!-- intro start -->
     <section class="py-5">
-      <div class="container d-md-flex">
+      <div class="container d-flex flex-wrap">
         <!-- col left start -->
-        <div class="col-12 col-md-6 d-flex align-items-center">
+        <div
+          class="col-12 col-md-6 d-flex align-items-center order-2 order-lg-1"
+        >
           <div class="container">
             <span class="text-uppercase h5 text-success d-block">
               intro
@@ -147,7 +155,7 @@
         </div>
         <!-- col left end -->
         <!-- col right start -->
-        <div class="col-12 col-md-6 mt-4 mt-md-0">
+        <div class="col-12 col-md-6 mt-4 mt-md-0 order-1 order-lg-2">
           <img src="intro.jpg" alt="Intro" class="img-fluid" />
         </div>
         <!-- col right end -->
@@ -201,6 +209,30 @@
     </section>
     <!-- intro end -->
 
+    <section class="py-5">
+      <div class="container">
+        <!-- Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="testimonial/t1.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="testimonial/t2.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="testimonial/t3.jpg" alt="" />
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -218,5 +250,21 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
